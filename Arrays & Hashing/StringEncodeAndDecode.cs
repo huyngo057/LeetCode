@@ -7,9 +7,7 @@ public class StringEncodeAndDecode
 	public string Encode(IList<string> strs)
 	{
 		var result = new StringBuilder();
-
 		foreach (var str in strs) result.Append(str.Length).Append('#').Append(str);
-
 		return result.ToString();
 	}
 
