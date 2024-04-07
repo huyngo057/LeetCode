@@ -13,6 +13,17 @@ public class ValidPalindrome
 		{
 			var left = s[i];
 			var right = s[j];
+			if (!((left >= 'a' && left <= 'z') || char.IsDigit(left)))
+			{
+				i++;
+				continue;
+			}
+
+			if (!((right >= 'a' && right <= 'z') || char.IsDigit(right)))
+			{
+				j--;
+				continue;
+			}
 
 			if (s[i] != s[j]) return false;
 			i++;
